@@ -1,0 +1,13 @@
+# This is a placeholder for the actual TensorFlow Lite model
+# In production, this should be replaced with the actual model file downloaded from:
+# https://storage.googleapis.com/download.tensorflow.org/models/tflite/task_library/activity_classification/rnn_classifier.tflite
+
+# Model specifications:
+# - Input shape: [1, 50, 6] (batch_size=1, sequence_length=50, features=6)
+# - Output shape: [1, 5] (batch_size=1, num_classes=5)
+# - Features: accelerometer (x,y,z) + gyroscope (x,y,z)
+# - Classes: Still, Walking, Running, In Vehicle, On Bicycle
+# - Sampling rate: 50Hz
+# - Data normalization: [-1, 1] range
+
+PLACEHOLDER_MODEL=true
