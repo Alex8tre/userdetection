@@ -1,13 +1,17 @@
-# This is a placeholder for the actual TensorFlow Lite model
-# In production, this should be replaced with the actual model file downloaded from:
-# https://storage.googleapis.com/download.tensorflow.org/models/tflite/task_library/activity_classification/rnn_classifier.tflite
+This is a placeholder for the TensorFlow Lite activity classification model.
 
-# Model specifications:
-# - Input shape: [1, 50, 6] (batch_size=1, sequence_length=50, features=6)
-# - Output shape: [1, 5] (batch_size=1, num_classes=5)
-# - Features: accelerometer (x,y,z) + gyroscope (x,y,z)
-# - Classes: Still, Walking, Running, In Vehicle, On Bicycle
-# - Sampling rate: 50Hz
-# - Data normalization: [-1, 1] range
+To use this Flutter app properly, you need to replace this file with a real
+TensorFlow Lite model (.tflite) trained for activity recognition.
 
-PLACEHOLDER_MODEL=true
+Recommended options:
+1. Download from TensorFlow Examples:
+   https://github.com/tensorflow/examples/tree/master/lite/examples/activity_recognition
+
+2. Use TensorFlow Lite Model Maker to create your own:
+   https://www.tensorflow.org/lite/tutorials/model_maker_activity_recognition
+
+3. Use a pre-trained model from TensorFlow Hub:
+   https://tfhub.dev/s?deployment-format=lite&problem-domain=video
+
+The model should accept accelerometer/gyroscope data and output activity classifications
+such as: walking, running, sitting, standing, etc.
