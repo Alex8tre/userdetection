@@ -1,0 +1,30 @@
+name: userdetection
+description: Sistema di Rilevamento Movimento e Posizione con TensorFlow Lite
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  permission_handler: ^11.0.1
+  geolocator: ^9.0.2
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/
+
+android:
+  compileSdkVersion: 33
+
+ios:
+  deployment_target: '11.0'
