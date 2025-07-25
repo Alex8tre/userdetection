@@ -70,8 +70,8 @@ unlinked_spec.ds
 *.iws
 .idea/
 
-# TensorFlow Lite models (add actual model files when available)
-assets/models/*.tflite
+# TensorFlow Lite models (the included motion_classifier.tflite should be committed)
+# assets/models/*.tflite
 
 # Temporary files
 /tmp/

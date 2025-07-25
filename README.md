@@ -81,7 +81,7 @@ lib/
 ### Prerequisiti
 - Flutter SDK >=3.0.0
 - Android Studio / Xcode per sviluppo nativo
-- TensorFlow Lite model (opzionale, usa fallback se non presente)
+- ✅ TensorFlow Lite model incluso nel progetto
 
 ### Setup Android
 1. **Permessi**: Location, Sensors, Background processing
@@ -113,10 +113,14 @@ final List<TargetLocation> targetLocations = [
 
 ## TensorFlow Lite Model
 
-### Specifiche Model Expected
+### ✅ Model Included
+Il progetto include ora un modello TensorFlow Lite pre-addestrato (`motion_classifier.tflite`) in `assets/models/`.
+
+### Specifiche Model
 - **Input**: 10 features (statistiche da finestra di 50 campioni)
 - **Output**: 4 classi [stationary, walking, running, vehicle]
 - **Formato**: .tflite ottimizzato per mobile
+- **Architettura**: Neural network con 2 hidden layers (16→8→4 neurons)
 
 ### Features di Input
 1. Magnitude media accelerometro
@@ -126,7 +130,11 @@ final List<TargetLocation> targetLocations = [
 5. Media accelerazione X, Y, Z
 6. Varianza accelerazione X, Y, Z
 
-Posizionare il file `motion_classifier.tflite` in `assets/models/`
+### Testing del Model
+Per testare il modello TensorFlow Lite:
+```bash
+python3 test_model.py
+```
 
 ## API e Usage
 
